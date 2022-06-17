@@ -110,3 +110,5 @@ build/
 #lockfiles
 yarn.lock
 
+#Python venv directory (try calling this way your virtual environment)
+venv/
