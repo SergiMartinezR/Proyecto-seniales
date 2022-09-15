@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useRef, Fragment } from "react";
+import React, { useState, useCallback, useRef, Fragment, useContext } from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 import { withRouter } from "react-router-dom";
@@ -8,6 +8,7 @@ import FormDialog from "../../../shared/components/FormDialog";
 import HighlightedInformation from "../../../shared/components/HighlightedInformation";
 import ButtonCircularProgress from "../../../shared/components/ButtonCircularProgress";
 import VisibilityPasswordTextField from "../../../shared/components/VisibilityPasswordTextField";
+import AuthContext from "../../../context/AuthContext";
 
 const styles = (theme) => ({
   forgotPassword: {
@@ -31,6 +32,9 @@ const styles = (theme) => ({
 });
 
 function LoginDialog(props) {
+
+  // let {loginUser}=useContext(AuthContext);
+
   const {
     setStatus,
     history,
@@ -70,6 +74,12 @@ function LoginDialog(props) {
         }, 1500);
         console.log(data.token);
         state.token = data.token;
+        setTimeout(() => {
+          history.push({
+            pathname: "/c/dashboard",
+            state: {token: data.token}
+          });
+        }, 150);
       }
     ).catch(error => console.error(error))
     // if (loginPhoneNumber.current.value !== "test@web.com") {

@@ -1,3 +1,13 @@
+fetch('http://127.0.0.1:8000/users/view/voluntario/', {
+  method: 'GET',
+  headers: { 'Content-Type': 'application/json' }
+}).then(data => data.json()).then(
+
+  data => {
+    console.log(data);
+  }
+).catch(error => console.error(error))
+
 const data = [
   {
     src: `${process.env.PUBLIC_URL}/images/logged_in/image1.jpg`,
@@ -38,6 +48,11 @@ const data = [
   {
     src: `${process.env.PUBLIC_URL}/images/logged_in/image10.jpg`,
     name: "Leonie",
+  },
+  {
+    src: 'http://localhost:8000/media/voluntario/pfp/BMW.png',
+    name: 'Un negro',
+    location: 'HOla'
   },
 ];
 

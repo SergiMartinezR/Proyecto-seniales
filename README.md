@@ -6,7 +6,7 @@ Remains of a SaaS business I once tried to build. Now transformed into a templat
 ![Node.js CI](https://github.com/dunky11/react-saas-template/workflows/Node.js%20CI/badge.svg)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
-[<img src="/.github/gifs/showcase.gif">](https://reactsaastemplate.com "Go to demo website")
+[<img src="/.github/gifs/2022-09-13-161530_1918x1079_escrotum.gif">](https://reactsaastemplate.com "Go to demo website")
 
 
 ## Getting Started

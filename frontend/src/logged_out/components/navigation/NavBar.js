@@ -7,7 +7,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import HomeIcon from "@mui/icons-material/Home";
 import HowToRegIcon from "@mui/icons-material/HowToReg";
 import LockOpenIcon from "@mui/icons-material/LockOpen";
-import BookIcon from "@mui/icons-material/Book";
+import AuthProvider from "../../../context/AuthContext";
 import NavigationDrawer from "../../../shared/components/NavigationDrawer";
 
 const styles = theme => ({

@@ -101,8 +101,8 @@ function Main(props) {
   useEffect(fetchBlogPosts, [fetchBlogPosts]);
 
   return (
-    <div className={classes.wrapper}>
-      {/* <AuthContext> */}
+    // <AuthContext>
+      <div className={classes.wrapper}>
         {!isCookieRulesDialogOpen && (
           <CookieConsent
             handleCookieRulesDialogOpen={handleCookieRulesDialogOpen}
@@ -120,6 +120,7 @@ function Main(props) {
           open={isCookieRulesDialogOpen}
           onClose={handleCookieRulesDialogClose}
         />
+
         <NavBar
           selectedTab={selectedTab}
           selectTab={setSelectedTab}
@@ -134,9 +135,10 @@ function Main(props) {
           selectHome={selectHome}
           selectBlog={selectBlog}
         />
-      {/* </AuthContext> */}
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    // </AuthContext>
+
   );
 }
 

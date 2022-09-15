@@ -1,7 +1,7 @@
 from django import views
 from django.shortcuts import render
 from rest_framework import viewsets, views, status 
-from users.models import User
+from users.models import User, AdultoMayor, Voluntario
 from users.serializers import AdultoMayorSerializer, AdultoMayorProfileSerializer, VoluntarioSerializer, VoluntarioProfileSerializer
 from rest_framework.response import Response
 
@@ -13,6 +13,14 @@ class AdultoMayorViewSet(viewsets.ModelViewSet):
 class VoluntarioViewSet(viewsets.ModelViewSet):
     queryset = User.objects.filter(is_voluntario=True)
     serializer_class = VoluntarioSerializer
+
+class VoluntarioProfileViewSet(viewsets.ModelViewSet):
+    queryset = Voluntario.objects.all()
+    serializer_class = VoluntarioProfileSerializer
+
+class AdultoMayorProfileViewSet(viewsets.ModelViewSet):
+    queryset = AdultoMayor.objects.all()
+    serializer_class = AdultoMayorProfileSerializer
 
 class AdultoMayorProfile(views.APIView):
 
