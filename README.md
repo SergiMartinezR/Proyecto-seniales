@@ -1,85 +1,51 @@
-# React SaaS Template
-Remains of a SaaS business I once tried to build. Now transformed into a template for building an SaaS/admin application using React + Material-UI.
+# Proyecto Señales
+Webapp creada para un proyecto social con el objetivo de ayudar a las personas de la tercera edad a solicitar compras, y algún voluntario asistirá a la persona a traer sus compras.
 
-[**Check out the demo**](https://reactsaastemplate.com)
+<img src="/.github/gifs/proyecto_index.gif">
 
-![Node.js CI](https://github.com/dunky11/react-saas-template/workflows/Node.js%20CI/badge.svg)
-[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+## Instalación
+### Frontend
 
-[<img src="/.github/gifs/2022-09-13-161530_1918x1079_escrotum.gif">](https://reactsaastemplate.com "Go to demo website")
-
-
-## Getting Started
-
-### Prerequisites
-
-#### Node.js 12+ (versions below could work, but are not tested)
-
-* Linux:
+1. Clona este repositorio
 
    ```
-   sudo apt install nodejs npm
+   git clone https://github.com/SergiMartinezR/Proyecto-seniales.git
    ```
-
-* Windows or macOS:
-
-   https://nodejs.org/en/
-
-### Installing
-
-1. Clone the repository
+2. Instala las dependencias.
 
    ```
-   git clone https://github.com/dunky11/react-saas-template
-   ```
-2. Install dependencies, this can take a minute
-
-   ```
-   cd react-saas-template
+   cd Proyecto-seniales/frontend
    npm install
    ```
-3. Start the local server
+3. Inicia el server local
 
    ```
    npm start
    ```
 
-Your browser should now open and show the app. Otherwise open http://localhost:3000/ in your browser. Editing files will automatically refresh the page.
+Se debería abrir una pestaña en tu navegador y mostrar la app. Si no es así, abre la url http://localhost:3000/ en tu navegador.
 
-### What to do next?
+### Backend
 
-If you are new to React, you should watch a [basic React tutorial](https://www.youtube.com/results?search_query=react+tutorial) first.
+1. Crea un entorno virtual (suponiendo que estas en el folder de frontend)
+  ```
+  cd ../backend
+  python3 -m venv venv
+  ```
+2. Activa el entorno virtual
+  ```
+  source venv/bin/activate
+  ```
+3. Instala las dependencias
+  ```
+  pip install -r requirements.txt
+  ```
+4. Inicia el server local
+  ```
+  cd comprasAPI
+  python3 manage.py runserver
+  ```
 
-If you know React, then most of the information you need is in the [Material-UI documentation](https://material-ui.com/getting-started/usage/).
+## WIP
 
-You can go into [src/theme.js](/src/theme.js) and change the primary and secondary color codes at the top of the script to the values you like and some magic will happen.
-
-## Deployment
-
-If you are satisfied with the state of your website you can run:
-
-```
-npm run build 
-```
-
-It will create a folder named build with your compiled project inside. After that copy its content into your webroot and you are ready to go.
-
-## Built With
-
-* [Create-React-App](https://github.com/facebook/create-react-app) - Used to bootstrap the development
-* [Material-UI](https://github.com/mui-org/material-ui) - Material Design components
-* [React-Router](https://github.com/ReactTraining/react-router) - Routing of the app
-* [Pace](https://github.com/HubSpot/pace) - Loading bar at the top
-* [Emoji-Mart](https://github.com/missive/emoji-mart) - Picker for the emojis
-* [React-Dropzone](https://github.com/react-dropzone/react-dropzone) - File drop component for uploads
-* [Recharts](https://github.com/recharts/recharts) - Charting library I used for the statistics
-* [Aos](https://github.com/michalsnik/aos) - Animations based on viewport
-* [React-Cropper](https://github.com/roadmanfong/react-cropper) - Cropper for the image uploads
-* [React-Stripe-js](https://github.com/stripe/react-stripe-js) - Stripes payment elements
-
-## Contribute
-Show your support by ⭐ the project. Pull requests are always welcome.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/dunky11/react-saas-template/blob/master/LICENSE) file for details.
+La app aún no está terminada, hasta el momento solo se puede crear una cuenta y logearse
